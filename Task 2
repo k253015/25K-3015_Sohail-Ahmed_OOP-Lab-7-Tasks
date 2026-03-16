@@ -1,0 +1,38 @@
+class Shape {
+    void area() {
+        System.out.println("Formula for area varies");
+    }
+}
+
+class Circle extends Shape {
+    void area() {
+        double r = 5.0;
+        System.out.println("Circle Area: " + (3.14 * r * r));
+    }
+}
+
+class Rectangle extends Shape {
+    void area() {
+        int l = 10, w = 5;
+        System.out.println("Rectangle Area: " + (l * w));
+    }
+}
+
+class Triangle extends Shape {
+    void area() {
+        int b = 10, h = 8;
+        System.out.println("Triangle Area: " + (0.5 * b * h));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s;
+        s = new Circle();
+        s.area();
+        s = new Rectangle();
+        s.area();
+        s = new Triangle();
+        s.area();
+    }
+}
