@@ -1,0 +1,35 @@
+class Restaurant {
+    void calculateDeliveryFee(double distance) {
+        System.out.println("Generic Delivery Fee: " + (distance * 1.5));
+    }
+}
+
+class FastFoodRestaurant extends Restaurant {
+    void calculateDeliveryFee(double distance) {
+        System.out.println("Fast Food Delivery Fee: " + (distance * 2.0));
+    }
+}
+
+class FineDiningRestaurant extends Restaurant {
+    void calculateDeliveryFee(double distance) {
+        System.out.println("Fine Dining Delivery Fee: " + (distance * 5.0 + 10.0));
+    }
+}
+
+class CafeRestaurant extends Restaurant {
+    void calculateDeliveryFee(double distance) {
+        System.out.println("Cafe Delivery Fee: " + (distance * 1.2));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Restaurant res;
+        res = new FastFoodRestaurant();
+        res.calculateDeliveryFee(5.0);
+        res = new FineDiningRestaurant();
+        res.calculateDeliveryFee(5.0);
+        res = new CafeRestaurant();
+        res.calculateDeliveryFee(5.0);
+    }
+}
