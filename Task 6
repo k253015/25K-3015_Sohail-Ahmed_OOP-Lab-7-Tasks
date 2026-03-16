@@ -1,0 +1,35 @@
+class Transport {
+    void fare() {
+        System.out.println("Base Fare: 0");
+    }
+}
+
+class Bus extends Transport {
+    void fare() {
+        System.out.println("Bus Fare: $2.50 per ride");
+    }
+}
+
+class Train extends Transport {
+    void fare() {
+        System.out.println("Train Fare: $5.00 per zone");
+    }
+}
+
+class Taxi extends Transport {
+    void fare() {
+        System.out.println("Taxi Fare: $3.00 base + $1.50 per mile");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Transport t;
+        t = new Bus();
+        t.fare();
+        t = new Train();
+        t.fare();
+        t = new Taxi();
+        t.fare();
+    }
+}
