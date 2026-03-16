@@ -1,0 +1,35 @@
+class Employee {
+    void calculateSalary() {
+        System.out.println("Base Salary: 0");
+    }
+}
+
+class Manager extends Employee {
+    void calculateSalary() {
+        System.out.println("Manager Salary: $80,000 + Bonus");
+    }
+}
+
+class Developer extends Employee {
+    void calculateSalary() {
+        System.out.println("Developer Salary: $70,000 + Stock Options");
+    }
+}
+
+class Intern extends Employee {
+    void calculateSalary() {
+        System.out.println("Intern Stipend: $2,000");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp;
+        emp = new Manager();
+        emp.calculateSalary();
+        emp = new Developer();
+        emp.calculateSalary();
+        emp = new Intern();
+        emp.calculateSalary();
+    }
+}
