@@ -1,0 +1,35 @@
+class Ride {
+    void calculateFare(double distance) {
+        System.out.println("Standard Fare: " + (distance * 10));
+    }
+}
+
+class BikeRide extends Ride {
+    void calculateFare(double distance) {
+        System.out.println("Bike Fare: " + (distance * 5));
+    }
+}
+
+class CarRide extends Ride {
+    void calculateFare(double distance) {
+        System.out.println("Car Fare: " + (distance * 15));
+    }
+}
+
+class LuxuryRide extends Ride {
+    void calculateFare(double distance) {
+        System.out.println("Luxury Fare: " + (distance * 40));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Ride r;
+        r = new BikeRide();
+        r.calculateFare(10.5);
+        r = new CarRide();
+        r.calculateFare(10.5);
+        r = new LuxuryRide();
+        r.calculateFare(10.5);
+    }
+}
