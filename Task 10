@@ -1,0 +1,38 @@
+class Course {
+    void calculateGrade(int assignments, int exams) {
+        System.out.println("Average Score: " + (assignments + exams) / 2);
+    }
+}
+
+class ProgrammingCourse extends Course {
+    void calculateGrade(int assignments, int exams) {
+        double finalGrade = (assignments * 0.6) + (exams * 0.4);
+        System.out.println("Programming Grade (60% Projects): " + finalGrade);
+    }
+}
+
+class MathematicsCourse extends Course {
+    void calculateGrade(int assignments, int exams) {
+        double finalGrade = (assignments * 0.3) + (exams * 0.7);
+        System.out.println("Mathematics Grade (70% Exams): " + finalGrade);
+    }
+}
+
+class DesignCourse extends Course {
+    void calculateGrade(int assignments, int exams) {
+        double finalGrade = (assignments * 0.8) + (exams * 0.2);
+        System.out.println("Design Grade (80% Portfolio): " + finalGrade);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Course c;
+        c = new ProgrammingCourse();
+        c.calculateGrade(90, 80);
+        c = new MathematicsCourse();
+        c.calculateGrade(90, 80);
+        c = new DesignCourse();
+        c.calculateGrade(90, 80);
+    }
+}
