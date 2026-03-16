@@ -1,0 +1,35 @@
+class Notification {
+    void send() {
+        System.out.println("Sending notification...");
+    }
+}
+
+class EmailNotification extends Notification {
+    void send() {
+        System.out.println("Sending Email: Check your inbox.");
+    }
+}
+
+class SMSNotification extends Notification {
+    void send() {
+        System.out.println("Sending SMS: Check your phone.");
+    }
+}
+
+class PushNotification extends Notification {
+    void send() {
+        System.out.println("Sending Push: Check your app alert.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Notification n;
+        n = new EmailNotification();
+        n.send();
+        n = new SMSNotification();
+        n.send();
+        n = new PushNotification();
+        n.send();
+    }
+}
